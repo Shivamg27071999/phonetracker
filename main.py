@@ -14,13 +14,13 @@
 
 
 import phonenumbers
+from phonenumbers import geocoder
 # from test import numbers
 import streamlit as st
-number = st.text_input('Enter Number for finding details','Enter here')
-from phonenumbers import geocoder
+number = st.text_input('Enter Number for finding details','     +917777777777' )
+
 ch_numbers = phonenumbers.parse(number,"CH")
 st.write(geocoder.description_for_number(ch_numbers,"en"))
-backgroundColor="white"
 
 from phonenumbers import carrier
 
